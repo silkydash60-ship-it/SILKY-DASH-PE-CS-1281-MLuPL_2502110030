@@ -1,0 +1,227 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/silkydash60-ship-it/SILKY-DASH-PE-CS-1281-MLuPL_2502110030/blob/main/2502110030_job03.it12%2C%20it10%2Cit8%2Cit6\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "7GywzU5Bj5q6"
+      },
+      "source": [
+        "IT12"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Iw5aNiw4j7p9",
+        "outputId": "d616aab5-9047-4b06-a976-a227b4233f04"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Hello, Shop Floor!\n",
+            "Operator name: Silky\n",
+            "Welcome to the shop floor, Silky\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"Hello, Shop Floor!\")\n",
+        "name = input(\"Operator name: \")\n",
+        "print(\"Welcome to the shop floor,\", name)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "DYoDUL6lkCni"
+      },
+      "source": [
+        "IT10"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "background_save": true,
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yHESErcUtddZ",
+        "outputId": "6dad0cad-9331-4af2-c3b0-2df8f9b48061"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "SCRAP\n"
+          ]
+        }
+      ],
+      "source": [
+        "accept = 0\n",
+        "rework = 0\n",
+        "scrap = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    d = float(input(\"Enter diameter of part: \"))\n",
+        "\n",
+        "    if 24.95 <= d <= 25.05:\n",
+        "        print(\"ACCEPT\")\n",
+        "        accept += 1\n",
+        "\n",
+        "    elif 24.90 <= d <= 25.10:\n",
+        "        print(\"REWORK\")\n",
+        "        rework += 1\n",
+        "\n",
+        "    else:\n",
+        "        print(\"SCRAP\")\n",
+        "        scrap += 1\n",
+        "\n",
+        "print(\"\\n----- BATCH REPORT -----\")\n",
+        "print(\"Accepted:\", accept)\n",
+        "print(\"Rework:\", rework)\n",
+        "print(\"Scrap:\", scrap)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "FSVj7SlGrtUo"
+      },
+      "source": [
+        "IT08"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6iYUGNGerxI2",
+        "outputId": "f808b17f-0525-41b6-fc7e-72fe83344ac2"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "Enter total number of parts: 54\n",
+            "Enter box size: 7\n",
+            "Full boxes: 7\n",
+            "Loose parts: 5\n",
+            "Audit: True\n"
+          ]
+        }
+      ],
+      "source": [
+        "total = int(input(\"Enter total number of parts: \"))\n",
+        "size = int(input(\"Enter box size: \"))\n",
+        "\n",
+        "boxes = total // size\n",
+        "loose = total % size\n",
+        "\n",
+        "print(\"Full boxes:\", boxes)\n",
+        "print(\"Loose parts:\", loose)\n",
+        "print(\"Audit:\", boxes * size + loose == total)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "C8M-XfXGr57G"
+      },
+      "source": [
+        "IT06"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "AFMPWzBosJqC",
+        "outputId": "f7a63d03-e61c-4ca8-ea15-6647183dd22d"
+      },
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "ACCEPT\n",
+            "ACCEPT\n",
+            "ACCEPT\n",
+            "ACCEPT\n",
+            "ACCEPT\n"
+          ]
+        }
+      ],
+      "source": [
+        "accept = 0\n",
+        "rework = 0\n",
+        "scrap = 0\n",
+        "\n",
+        "for i in range(10):\n",
+        "    d = float(input(\"Enter diameter: \"))\n",
+        "\n",
+        "    if 24.95 <= d <= 25.05:\n",
+        "        print(\"ACCEPT\")\n",
+        "        accept += 1\n",
+        "    elif 24.90 <= d <= 25.10:\n",
+        "        print(\"REWORK\")\n",
+        "        rework += 1\n",
+        "    else:\n",
+        "        print(\"SCRAP\")\n",
+        "        scrap += 1\n",
+        "\n",
+        "boxes = accept // 4\n",
+        "loose = accept % 4\n",
+        "\n",
+        "print(\"\\n----- END OF SHIFT SUMMARY -----\")\n",
+        "print(\"Accepted parts:\", accept)\n",
+        "print(\"Rework parts:\", rework)\n",
+        "print(\"Scrap parts:\", scrap)\n",
+        "print(\"Full boxes:\", boxes)\n",
+        "print(\"Loose parts:\", loose)\n",
+        "print(\"Audit:\", boxes * 4 + loose == accept)"
+      ]
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMgSl6iZv9bCucUC7HlfLRH",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
